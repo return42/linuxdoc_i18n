@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, EDW
+# This file is distributed under the same license as the Test Project
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Test Project \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-05 17:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/index.rst:2
+msgid "Test"
+msgstr ""
+
+#: ../../source/index.rst:4
+msgid "table title"
+msgstr "table title fr"
+
+#: ../../source/index.rst:10
+msgid "head col 1"
+msgstr "head col 1 fr"
+
+#: ../../source/index.rst:11
+msgid "head col 2"
+msgstr "head col 2 fr"
+
+#: ../../source/index.rst:12
+msgid "head col 3"
+msgstr "head col 3 fr"
+
+#: ../../source/index.rst:13
+msgid "head col 4"
+msgstr "head col 4 fr"
+
+#: ../../source/index.rst:15
+msgid "column 1"
+msgstr "column 1 fr"
+
+#: ../../source/index.rst:16
+msgid "field 1.1"
+msgstr "field 1.1 fr"
+
+#: ../../source/index.rst:17
+msgid "field 1.2 with autospan"
+msgstr "field 1.2 with autospan fr"
+
+#: ../../source/index.rst:19
+msgid "column 2"
+msgstr "column 2 fr"
+
+#: ../../source/index.rst:20
+msgid "field 2.1"
+msgstr "field 2.1 fr"
+
+#: ../../source/index.rst:21
+msgid ":rspan:`1` :cspan:`1` field 2.2 - 3.3"
+msgstr ":rspan:`1` :cspan:`1` test 2.2 - 3.3"
+
+#: ../../source/index.rst:25
+msgid "column 3"
+msgstr "column 3 fr"
+
