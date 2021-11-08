@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../index.rst:21
 msgid ":rspan:`1` :cspan:`1` field 2.2 - 3.3"
-msgstr ""
+msgstr "test (fr) field 2.2 - 3.3"
 
 #: ../index.rst:25
 msgid "column 3"
@@ -116,5 +116,4 @@ msgstr ""
 
 #: ../index.rst:48
 msgid ":math:`a^2 + b^2 = c^2`"
-msgstr ""
-
+msgstr "test (fr) :math:`a^2 + b^2 = c^2`"

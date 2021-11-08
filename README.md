@@ -5,9 +5,6 @@
     pip install pip wheel setuptools
     pip install -r requirements.txt
 
-    # now edit translations in (see below)
-    # ...
-
     # and build (fr) HTML
     make -e SPHINXOPTS="-v -D language='fr'" html
 
@@ -32,24 +29,14 @@
 
 # Translate fr
 
-```diff
-diff --git a/source/locales/fr/LC_MESSAGES/index.po b/source/locales/fr/LC_MESSAGES/index.po
-index a90c243..4499529 100644
---- a/source/locales/fr/LC_MESSAGES/index.po
-+++ b/source/locales/fr/LC_MESSAGES/index.po
-@@ -64,7 +64,7 @@ msgstr ""
- 
- #: ../index.rst:21
- msgid ":rspan:`1` :cspan:`1` field 2.2 - 3.3"
--msgstr ""
-+msgstr "test (fr) field 2.2 - 3.3"
- 
- #: ../index.rst:25
- msgid "column 3"
-@@ -116,5 +116,5 @@ msgstr ""
- 
- #: ../index.rst:48
- msgid ":math:`a^2 + b^2 = c^2`"
--msgstr ""
-+msgstr "test (fr) :math:`a^2 + b^2 = c^2`"
-```
+The ``:rspan:`` and ``:cspan:`` directives are *special* reST-roles.  These directives are used in the ListTableBuilder and [removed](https://github.com/return42/linuxdoc/blob/83274eeb441df8a93b341f12575f87e86313453e/linuxdoc/rstFlatTable.py#L331-L346) while the table is parsed.  These reST-roles must not be in the translation:
+
+    #: ../index.rst:21
+    msgid ":rspan:`1` :cspan:`1` field 2.2 - 3.3"
+    msgstr "test (fr) field 2.2 - 3.3"
+
+Most other [reStructuredText Interpreted Text Roles](https://docutils.sourceforge.io/docs/ref/rst/roles.html) should be translated *as-is*:
+
+    #: ../index.rst:48
+    msgid ":math:`a^2 + b^2 = c^2`"
+    msgstr "test (fr) :math:`a^2 + b^2 = c^2`"
