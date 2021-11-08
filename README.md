@@ -6,7 +6,7 @@
     pip install -r requirements.txt
 
     # create POT locales/index.pot
-    sphinx-build -M gettext -d "build/.doctrees" source source/locales
+    sphinx-build -M gettext -d "build/doctrees" source source/locales
 
     # create fr translation in locales/fr/LC_MESSAGES/index.po
     sphinx-intl update -l fr -d source/locales -p source/locales
@@ -19,7 +19,7 @@
 # Uninstall steps
 
     deactivate
-    rm -rf .venev build source/locales
+    rm -rf .venv build source/locales
 
 # Translate fr
 
