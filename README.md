@@ -11,10 +11,17 @@
     # create fr translation in locales/fr/LC_MESSAGES/index.po
     sphinx-intl update -l fr -d source/locales -p source/locales
 
-    # now edit translations in (see below) and build html
+    # now edit translations in (see below)
+    # ...
+
+    # and build (fr) HTML
     make -e SPHINXOPTS="-v -D language='fr'" html
 
+    # open HTML in the browser
     xdg-open build/html/index.html
+
+    # build (en) HTML and reload page in the browser
+    make -e SPHINXOPTS="-v -D language='en'" html
 
 # Uninstall steps
 
@@ -25,7 +32,7 @@
 
 ```diff
 diff --git a/source/locales/fr/LC_MESSAGES/index.po b/source/locales/fr/LC_MESSAGES/index.po
-index 1984d32..4536408 100644
+index a90c243..4499529 100644
 --- a/source/locales/fr/LC_MESSAGES/index.po
 +++ b/source/locales/fr/LC_MESSAGES/index.po
 @@ -64,7 +64,7 @@ msgstr ""
@@ -37,4 +44,10 @@ index 1984d32..4536408 100644
  
  #: ../index.rst:25
  msgid "column 3"
+@@ -116,5 +116,5 @@ msgstr ""
+ 
+ #: ../index.rst:48
+ msgid ":math:`a^2 + b^2 = c^2`"
+-msgstr ""
++msgstr "test (fr) :math:`a^2 + b^2 = c^2`"
 ```

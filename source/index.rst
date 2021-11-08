@@ -23,3 +23,28 @@ Test1
    * .. _`last row`:
 
      - column 3
+
+
+Test2
+-----
+
+.. list-table:: reST roles
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - reST role
+     - rendered
+
+   * - guilabel
+     - :guilabel:`&Cancel`
+
+   * - kbd
+     - :kbd:`C-x C-f`
+
+   * - menuselection
+     - :menuselection:`Open --> File`
+
+   * - math
+     - :math:`a^2 + b^2 = c^2`
+
+
