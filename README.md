@@ -5,9 +5,6 @@
     pip install pip wheel setuptools
     pip install -r requirements.txt
 
-    # create fr translation in locales/fr/LC_MESSAGES/index.po
-    sphinx-intl update -l fr -d source/locales -p source/locales
-
     # now edit translations in (see below)
     # ...
 
@@ -23,6 +20,10 @@
 # create POT locales/index.pot
 
     sphinx-build -M gettext -d "build/.doctrees" source source/locales
+
+# create fr translation in locales/fr/LC_MESSAGES/index.po
+
+    sphinx-intl update -l fr -d source/locales -p source/locales
 
 # Uninstall steps
 
