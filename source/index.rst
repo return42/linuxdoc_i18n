@@ -1,5 +1,5 @@
-Test1
------
+Test flat-table
+---------------
 
 .. flat-table:: table title
    :widths: 2 1 1 3
@@ -25,8 +25,8 @@ Test1
      - column 3
 
 
-Test2
------
+Test list-table
+---------------
 
 .. list-table:: reST roles
    :header-rows: 1
@@ -47,4 +47,7 @@ Test2
    * - math
      - :math:`a^2 + b^2 = c^2`
 
+Test typedef
+------------
 
+.. kernel-doc:: test_typedef.h
