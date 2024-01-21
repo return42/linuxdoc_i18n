@@ -1,20 +1,33 @@
-# Minimal makefile for Sphinx documentation
-#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+.DEFAULT_GOAL=help
 
-# Put it first so that "make" without argument is like "make help".
-help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+# wrap ./prj script
+# -----------------
 
-.PHONY: help Makefile
+PRJ += help env.build
+PHONY += $(PRJ)
+$(PRJ):
+	@./prj $@
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+# local TOPTARGETS
+test clean::
+	@./prj $@
+
+
+# run make in subdirectories
+# --------------------------
+
+# Makefiles in subdirs needs to define TOPTARGETS::
+#    .PHONY: all clean test build
+
+TOPTARGETS := all clean test build
+SUBDIRS := $(dir $(wildcard */Makefile))
+PHONY += $(TOPTARGETS)
+
+$(TOPTARGETS)::
+	@for dir in $(SUBDIRS); do \
+	    $(MAKE) -C $$dir $@ || exit $$?; \
+	done; \
+
+.PHONY: $(PHONY)
